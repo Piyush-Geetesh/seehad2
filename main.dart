@@ -199,9 +199,11 @@
 //   }
 // }
 //------------------------------------------------------------------------xylophone
+// ignore_for_file: avoid_print
+
+// import 'package:audioplayers/audioplayers.dart';
 // import 'package:flutter/material.dart';
 // import 'dart:math';
-// import 'package:audioplayers/src/audio_cache.dart';
 
 // void main() => runApp(MaterialApp(
 //       home: Scaffold(
@@ -229,9 +231,10 @@
 //     });
 //   }
 
-//   void playSound(int noteNumber) {
-//     final player = AudioCache();
-//     player.play("assets_note$noteNumber.wav");
+//   void playSound(int i) async {
+//     // i is the number we pass to String note$i.wav
+//     final player = AudioPlayer();
+//     await player.play(AssetSource('assets_note$i.wav'));
 //   }
 
 //   @override
@@ -278,5 +281,6 @@
 //     );
 //   }
 // }
+
 
 
